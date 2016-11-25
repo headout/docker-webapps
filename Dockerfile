@@ -11,8 +11,12 @@ RUN apt-get update && \
 
 RUN pip3 install --upgrade pip requests
 
-RUN apt-get install nodejs && \
-  apt-get install npm
+RUN apt-get install -y nodejs npm
+# TODO could uninstall some build dependencies
+
+# fucking debian installs `node` as `nodejs`
+RUN update-alternatives --install /usr/bin/node node /usr/bin/nodejs 10
+
 
 RUN npm install less
 
