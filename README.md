@@ -1,24 +1,24 @@
-# docker-ubuntu-java-python3
-Base docker image based on Ubuntu, with Java 8 (openjdk) and Python 3 (with `pip` and `requests` modules preinstalled). It also includes supervisord for conveniently starting services within container.
+# docker-webapps
+Base docker image based on Ubuntu, with Java 8 (openjdk) and Python 3 (with `pip` and `requests` modules preinstalled), node, npm and lessc. It also includes supervisord for conveniently starting services within container.
 
 ## Usage
 Get the image:
 ```
-docker pull korekontrol/ubuntu-java-python3
+docker pull headout/webapps
 ```
 
 Use it in `Dockerfile`:
 ```
-FROM korekontrol/ubuntu-java-python3
+FROM headout/webapps
 ```
 
 ## Credits
-Created by [Marek Obuchowicz](https://github.com/marek-obuchowicz) from [KoreKontrol](https://www.korekontrol.eu/)
+Modified on top of [docker-ubuntu-java-python3](https://github.com/korekontrol/docker-ubuntu-java-python3)
 
 ## License
 The MIT License (MIT)
 
-Copyright (c) 2015 Kore Poland sp. z o.o.
+Copyright (c) 2016 Headout Inc.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

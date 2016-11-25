@@ -1,5 +1,5 @@
 FROM ubuntu:15.04
-MAINTAINER Marek Obuchowicz <marek@korekontrol.eu>
+MAINTAINER Headout <tech@headout.com>
 
 # Setup python and java and base system
 ENV DEBIAN_FRONTEND noninteractive
@@ -10,6 +10,11 @@ RUN apt-get update && \
   apt-get install -q -y openjdk-8-jdk python3-pip libsnappy-dev language-pack-en supervisor
 
 RUN pip3 install --upgrade pip requests
+
+RUN apt-get install nodejs && \
+  apt-get install npm
+
+RUN npm install less
 
 ADD supervisord.conf /etc/supervisor/supervisord.conf
 
