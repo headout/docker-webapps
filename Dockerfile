@@ -16,9 +16,10 @@ RUN apt-get install -y nodejs npm
 
 # fucking debian installs `node` as `nodejs`
 RUN update-alternatives --install /usr/bin/node node /usr/bin/nodejs 10
-
-
 RUN npm install -g less clean-css
+
+RUN apt-get install -y zip
+RUN pip install boto3==1.3.0
 
 ADD supervisord.conf /etc/supervisor/supervisord.conf
 
