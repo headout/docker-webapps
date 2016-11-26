@@ -18,7 +18,7 @@ RUN apt-get install -y nodejs npm
 RUN update-alternatives --install /usr/bin/node node /usr/bin/nodejs 10
 
 
-RUN npm install -g less
+RUN npm install -g less clean-css
 
 ADD supervisord.conf /etc/supervisor/supervisord.conf
 
